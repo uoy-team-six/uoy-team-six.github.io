@@ -1,9 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/pico.min.css">
     <title>UniSim</title>
+
+    <style>
+      [role="tabs"] section {
+          display: none;
+      }
+
+      [role="tabs"] [type="radio"]:checked + section {
+          display: block;
+      }
+
+      nav[role="tab-control"] label {
+          cursor: pointer;
+      }
+
+      label:hover {
+          color: var(--pico-primary-hover);
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <main class="container">
+      <nav role="tab-control">
+        <ul>
+          <li><h3>UniSim</h3></li>
+        </ul>
+        <ul>
+          <li><label for="intro-tab">Intro</label></li>
+          <li><label for="architecture-tab">Architecture</label></li>
+          <li><label for="requirements-tab">Requirements</label></li>
+          <li><label for="download-tab">Download</label></li>
+        </ul>
+      </nav>
+      <div role="tabs">
+        <input hidden="hidden" type="radio" name="tabs" id="intro-tab" checked="checked"/>
+        <section>
+          <p>UniSim is a game about...</p>
+
+          <h4>Screenshots</h4>
+          <div class="grid">
+            <img src="https://placehold.co/640x480">
+            <img src="https://placehold.co/640x480">
+          </div>
+        </section>
+
+        <input hidden="hidden" type="radio" name="tabs" id="architecture-tab"/>
+        <section>
+          Architecture section
+        </section>
+
+        <input hidden="hidden" type="radio" name="tabs" id="requirements-tab"/>
+        <section>
+          Requirements section
+        </section>
+
+        <input hidden="hidden" type="radio" name="tabs" id="download-tab"/>
+        <section>
+          <a href="#">Download link</a>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
