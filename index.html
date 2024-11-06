@@ -29,6 +29,29 @@
           vertical-align: baseline;
       }
 
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        justify-items: center;
+      }
+
+      .team-member {
+        text-align: center;
+        max-width: 200px;
+      }
+
+      .team-member img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+      }
+
+      .team-member h5, .team-member p {
+        margin: 0.2rem 0;
+      }
+
       .weekly-section {
         margin-bottom: 2 rem;
       }
@@ -88,16 +111,44 @@
 
         <input hidden="hidden" type="radio" name="tabs" id="team-tab"/>
         <section>
-          <p>
-            <ul>
-              <li>Hussain Alhabib - Quality Assurance</li>
-              <li>Ellen Matthews - Developer and Secretary</li>
-              <li>Minnie Poon - Developer and Editor</li>
-              <li>Jason Ruan - Team Lead and Facilitator</li>
-              <li>Daniel Smith - Developer and Secretary</li>
-              <li>Owen Smith - Lead Developer</li>
-            </ul>
-          </p>
+          <h4>Our Team</h4>
+          <div class="team-grid">
+            <div class="team-member">
+              <img src="./assets/profile_placeholder.png/" alt="Profile Placeholder">
+              <h2>Hussain Alhabib</h2>
+              <p><b>Risk Assessment and Mitigation Lead</b></p>
+              <p>Quality Assurance</p>
+            </div>
+            <div class="team-member">
+              <img src="./assets/profile_placeholder.png/" alt="Profile Placeholder">
+              <h2>Ellen Matthews</h2>
+              <p><b>Requirements Lead</b></p>
+              <p>Secretary</p>
+            </div>
+            <div class="team-member">
+              <img src="./assets/profile_placeholder.png/" alt="Profile Placeholder">
+              <h2>Minnie Poon</h2>
+              <p><b>Method Selection and Planning Lead</b></p>
+              <p>Report Editor</p>
+            </div>
+            <div class="team-member">
+              <img src="./assets/profile_placeholder.png/" alt="Profile Placeholder">
+              <h2>Jason Ruan</h2>
+              <p><b>Architecture Lead</b></p>
+              <p>Project Lead</p>
+            </div>
+            <div class="team-member">
+              <img src="./assets/profile_placeholder.png/" alt="Profile Placeholder">
+              <h2>Daniel Smith</h2>
+              <p><b>Website Lead</b></p>
+              <p>Secretary</p>
+            </div>
+            <div class="team-member">
+              <img src="./assets/profile_placeholder.png/" alt="Profile Placeholder">
+              <h2>Owen Smith</h2>
+              <p><b>Implementation Lead</b></p>
+              <p>Lead Developer</p>
+            </div>
         </section>
 
         <input hidden="hidden" type="radio" name="tabs" id="weekly-screenshots-tab"/>
